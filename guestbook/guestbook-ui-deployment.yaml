@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2 
-        name: guestbook-ui-app
+        name: guestbook-ui-app1
         ports:
         - containerPort: 80
